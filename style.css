@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f5f7;
+  color: #222;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  margin: 0 0 4px;
+}
+
+#datum {
+  margin: 0 0 24px;
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.karte {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.kopf {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.kopf input {
+  width: 24px;
+  height: 24px;
+  accent-color: #2e9e5b;
+}
+
+.serie {
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Die 7 Punkte für die letzten Tage */
+.woche {
+  display: flex;
+  gap: 6px;
+}
+
+.tag {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e2e4e8;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.tag.erledigt {
+  background: #2e9e5b;
+  color: #fff;
+}
+
+.hinweis {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: #888;
+}
