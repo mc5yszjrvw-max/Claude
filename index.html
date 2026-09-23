@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meine Gewohnheiten</title>
+
+  <!-- Damit die Seite auf dem iPad-Home-Bildschirm wie eine App wirkt -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Gewohnheiten">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="icon.png">
+  <meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16181c" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Meine Gewohnheiten</h1>
+    <p id="datum"></p>
+
+    <!-- Die Karten für die Gewohnheiten werden von app.js hier eingefügt -->
+    <ul id="liste"></ul>
+
+    <p class="hinweis">Deine Daten werden nur in diesem Browser gespeichert.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

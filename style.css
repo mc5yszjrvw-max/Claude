@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Farben an einer Stelle, damit der Dark Mode sie einfach umschalten kann */
+:root {
+  /* Sagt dem Browser, dass auch Checkboxen usw. dunkel sein dürfen */
+  color-scheme: light dark;
+  --hintergrund: #f4f5f7;
+  --karte: #fff;
+  --text: #222;
+  --text-leise: #666;
+  --punkt: #e2e4e8;
+  --gruen: #2e9e5b;
+  --schatten: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Folgt der iPad-Einstellung Hell/Dunkel */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hintergrund: #16181c;
+    --karte: #23262b;
+    --text: #eee;
+    --text-leise: #9a9ea6;
+    --punkt: #3a3e45;
+    --gruen: #38b26a;
+    --schatten: none;
+  }
+}
+
+html {
+  /* Verhindert, dass Safari beim Drehen die Schrift eigenmächtig vergrößert */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--hintergrund);
+  color: var(--text);
+  /* Kein grauer Blitz beim Antippen */
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  max-width: 560px;
+  margin: 0 auto;
+  /* env(safe-area-...) hält Abstand zu Kamera-Aussparung und Home-Balken */
+  padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+}
+
+h1 {
+  margin: 0 0 4px;
+}
+
+#datum {
+  margin: 0 0 24px;
+  color: var(--text-leise);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.karte {
+  background: var(--karte);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  box-shadow: var(--schatten);
+}
+
+/* Die ganze Zeile ist antippbar, nicht nur das kleine Kästchen */
+.kopf {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 48px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.kopf input {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  accent-color: var(--gruen);
+  flex-shrink: 0;
+}
+
+.serie {
+  margin: 8px 0 10px;
+  color: var(--text-leise);
+}
+
+/* Die 7 Punkte für die letzten Tage */
+.woche {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--punkt);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-leise);
+}
+
+.tag.erledigt {
+  background: var(--gruen);
+  color: #fff;
+}
+
+.hinweis {
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: var(--text-leise);
+}
