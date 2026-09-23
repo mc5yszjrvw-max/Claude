@@ -5,7 +5,6 @@ const GEWOHNHEITEN = [
   { id: "lesen", name: "📖 Lesen" },
   { id: "wasser", name: "💧 Wasser trinken" },
   { id: "meditation", name: "🧘 Meditation" },
-
 ];
 
 const SPEICHER_SCHLUESSEL = "gewohnheiten";
