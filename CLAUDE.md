@@ -21,6 +21,16 @@
   nur die Schritte geben, die er in der GitHub-Weboberfläche selbst machen muss.
 - Code trotzdem sauber und verständlich halten, damit er wartbar bleibt.
 
+## Standard-Anforderungen für neue Tools (sofern der Nutzer nichts anderes sagt)
+- Nur der Nutzer selbst benutzt das Tool, kein Login nötig.
+- Nur auf dem iPad.
+- Datenverlust: bei Test-/Lernprojekten egal, bei echten Tools ärgerlich.
+  → Echte Tools bekommen von Anfang an Export/Import als Sicherung (z. B. Datei
+  in iCloud über die App „Dateien“). localStorage allein reicht dafür nicht.
+- Nutzung unregelmäßig, etwa 2x pro Woche, stark schwankend.
+- Das Repo ist öffentlich: Bei sensiblen Inhalten (Finanzen, Gesundheit,
+  persönliche Daten im Code) vorher darauf hinweisen.
+
 ## Projekt: Gewohnheits-Tracker
 - Statische Seite ohne Build-Schritt: `index.html`, `style.css`, `app.js`.
 - Kein Framework, keine Abhängigkeiten. Kommentare im Code auf Deutsch.
